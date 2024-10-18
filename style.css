@@ -123,7 +123,6 @@ nav ul li a:hover {
 }
 
 /* Link Styles */
-/* Link Styles */
 a {
     color: #c8d6b2;
     /* Lighter green for better contrast */
@@ -154,7 +153,6 @@ footer {
     text-align: center;
     color: #8f9779;
 }
-
 
 .blog-section {
     padding: 40px;
@@ -202,7 +200,7 @@ form input,
 form textarea {
     width: 100%;
     padding: 10px;
-    border: none
+    border: none;
 }
 
 /* Blog Button Styling */
@@ -230,4 +228,74 @@ form textarea {
     transform: scale(1.05);
     /* Slightly enlarge on hover */
     text-decoration: none;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-category {
+    flex: 1 1 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+}
+
+#work-experience {
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    /* Improved line spacing */
+}
+
+.experience-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    /* Consistent padding */
+    background-color: #738678;
+    /* Slightly darker neutral green */
+    border-radius: 10px;
+    /* Rounded edges for better aesthetics */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+}
+
+.experience-item h4 {
+    margin: 0 0 10px;
+    color: #fff;
+    /* Change company name color to white */
+    /* Optional: add a subtle background or shadow for more contrast */
+
+    /* Adds a subtle shadow for better readability */
+}
+
+.experience-item p {
+    color: #d4e4d1;
+    /* Keep the job title description color for contrast */
+}
+
+
+.experience-item ul {
+    list-style-type: disc;
+    /* Standard bullet points */
+    padding-left: 20px;
+    /* Indentation for list */
+    color: #d4e4d1;
+    /* Same color as the paragraph for consistency */
+}
+
+.experience-item ul li {
+    margin-bottom: 5px;
+    /* Space between list items */
 }
