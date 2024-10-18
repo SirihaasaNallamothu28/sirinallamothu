@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add New Blog Post</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <main class="new-post-section">
+            <h1>Add a New Blog Post</h1>
+            <form id="new-post-form">
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div>
+                    <label for="content">Content</label>
+                    <textarea id="content" name="content" required></textarea>
+                </div>
+                <button type="submit">Submit Post</button>
+            </form>
+        </main>
+    </div>
+
+    <script>
+        // Check if the user is logged in
+        if (localStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'login.html'; // Redirect to login page if not logged in
+        }
+
+        // Handle form submission and save the blog post
+        document.getElementById('new-post-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            savePost(title, content); // Save post (use the savePost function from blog.js)
+            window.location.href = 'blog.html'; // Redirect to blog page after submission
+        });
+
+        // Function to save a new blog post
+        function savePost(title, content) {
+            let posts = JSON.parse(localStorage.getItem('posts')) || [];
+            posts.push({ title, content });
+            localStorage.setItem('posts', JSON.stringify(posts));
+        }
+    </script>
+</body>
+
+</html>

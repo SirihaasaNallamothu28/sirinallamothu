@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <main class="login-section">
+            <h1>Login</h1>
+            <form id="login-form">
+                <div>
+                    <label for="password">Enter Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p id="error-message" style="color:red; display:none;">Incorrect password. Please try again.</p>
+        </main>
+    </div>
+
+    <script>
+        const correctPassword = 'siriblogs8'; // Replace this with your password
+
+        // Handle login form submission
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const enteredPassword = document.getElementById('password').value;
+
+            if (enteredPassword === correctPassword) {
+                localStorage.setItem('loggedIn', 'true');
+                window.location.href = 'new-post.html'; // Redirect to the new post page
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

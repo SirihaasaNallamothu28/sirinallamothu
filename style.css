@@ -1,0 +1,233 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #4d5d53;
+    /* Dark Sage background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #738678;
+    /* Slightly darker neutral green */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+/* Left Section */
+.left-section {
+    background-color: #78866b;
+    /* Darker sage green for the sidebar */
+    padding: 40px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px 0 0 15px;
+}
+
+.left-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    /* Header title changed to white */
+}
+
+.left-section h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #fff;
+    /* Header title changed to white */
+}
+
+.left-section p {
+    margin-bottom: 30px;
+    color: #c8d6b2;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    /* Links changed to white */
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #8f9779;
+    /* Sage green on hover */
+    text-decoration: none;
+    /* Removed underline on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Right Section */
+.right-section {
+    padding: 40px;
+    width: 65%;
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    max-height: 100vh;
+    /* Set a maximum height to ensure scrolling works */
+}
+
+/* Right Section Heading Styles */
+.right-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    /* Header title changed to white */
+}
+
+.right-section p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #d4e4d1;
+    /* Lighter green for body text */
+}
+
+/* Link Styles */
+/* Link Styles */
+a {
+    color: #c8d6b2;
+    /* Lighter green for better contrast */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    /* Removed underline on hover */
+    color: #8f9779;
+    /* Slightly darker green on hover */
+}
+
+.profile-picture {
+    width: 150px;
+    /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%;
+    /* Make the image circular */
+    object-fit: cover;
+    /* Ensures the image covers the container properly */
+    margin-bottom: 20px;
+}
+
+/* Footer and minor details */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #8f9779;
+}
+
+
+.blog-section {
+    padding: 40px;
+    width: 100%;
+}
+
+.new-post-section {
+    padding: 40px;
+    width: 100%;
+}
+
+.blog-post {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.new-post-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8f9779;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.new-post-btn:hover {
+    background-color: #738678;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none
+}
+
+/* Blog Button Styling */
+.blog-link {
+    display: inline-block;
+    background-color: #8f9779;
+    /* Sage green */
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 25px;
+    /* Rounded edges for a cute look */
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    margin-top: 20px;
+}
+
+.blog-link:hover {
+    background-color: #738678;
+    /* Darker shade on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+    text-decoration: none;
+}

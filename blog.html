@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Blog Section -->
+        <main class="blog-section">
+            <h1>Sirihaasa Nallamothu's Blog</h1>
+            <div id="blog-posts">
+                <!-- Blog posts will be dynamically inserted here -->
+            </div>
+            <a href="new-post.html" id="new-post-link" class="new-post-btn" style="display: none;">Add New Post</a>
+        </main>
+    </div>
+
+    <script>
+        // Display posts on the blog page
+        function displayPosts() {
+            const blogPostsDiv = document.getElementById('blog-posts');
+            blogPostsDiv.innerHTML = '';
+
+            let posts = JSON.parse(localStorage.getItem('posts')) || [];
+            posts.forEach(post => {
+                const postDiv = document.createElement('div');
+                postDiv.className = 'blog-post';
+
+                const postTitle = document.createElement('h2');
+                postTitle.textContent = post.title;
+
+                const postContent = document.createElement('p');
+                postContent.textContent = post.content;
+
+                postDiv.appendChild(postTitle);
+                postDiv.appendChild(postContent);
+                blogPostsDiv.appendChild(postDiv);
+            });
+        }
+
+        // Check if user is logged in and show the "Add New Post" button if true
+        if (localStorage.getItem('loggedIn') === 'true') {
+            document.getElementById('new-post-link').style.display = 'inline-block';
+        }
+
+        // Load and display blog posts
+        displayPosts();
+    </script>
+</body>
+
+</html>
