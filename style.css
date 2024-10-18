@@ -299,3 +299,115 @@ p {
     margin-bottom: 5px;
     /* Space between list items */
 }
+
+#gallery {
+    margin: 40px 0;
+    /* Add some margin to separate from other sections */
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Responsive grid */
+    gap: 15px;
+    /* Space between images */
+}
+
+.gallery-item {
+    width: 100%;
+    /* Make images fill their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Rounded edges for images */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Soft shadow for depth */
+    transition: transform 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge image on hover */
+}
+
+/* Awards Section Styling */
+#awards {
+    margin: 40px 0;
+    /* Add some margin to separate from other sections */
+}
+
+.awards-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack awards vertically */
+    gap: 15px;
+    /* Space between awards */
+}
+
+.award-item {
+    background-color: #78866b;
+    /* Keeping the same color as the left section */
+    padding: 15px;
+    /* Add padding for better spacing */
+    border-radius: 10px;
+    /* Rounded edges for consistency */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+}
+
+.award-item h4 {
+    color: #fff;
+    /* White color for award titles */
+    margin-bottom: 5px;
+    /* Space below the title */
+}
+
+.award-item p {
+    color: #d4e4d1;
+    /* Lighter green for description text */
+    margin: 0;
+    /* Reset margin for consistency */
+}
+
+/* Awards Section Styling */
+#awards {
+    margin: 40px 0;
+    /* Add some margin to separate from other sections */
+}
+
+.awards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow awards to wrap to the next line */
+    gap: 20px;
+    /* Space between awards */
+}
+
+.award-item {
+    background-color: #4d5d53;
+    /* Match the body background color for consistency */
+    color: #fff;
+    /* White text for better contrast */
+    padding: 15px;
+    /* Add padding for better spacing */
+    border-radius: 10px;
+    /* Rounded edges for consistency */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    flex: 1 1 calc(33% - 20px);
+    /* Responsive flex item, 3 per row */
+    /* Adjust the width as necessary; calc(33% - gap) to ensure spacing */
+}
+
+.award-item h4 {
+    margin-bottom: 5px;
+    /* Space below the title */
+}
+
+.award-item p {
+    color: #d4e4d1;
+    /* Lighter green for description text */
+    margin: 0;
+    /* Reset margin for consistency */
+}
